@@ -1,17 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TopBar />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TopBar from "./components/layouts/TopBar.vue";
+// import HomeView from "./components/HomeView.vue";
+// import WeatherSearch from "./components/WeatherSearch.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TopBar,
+    // HomeView,
+    // WeatherSearch,
+  },
+};
 </script>
 
 <style>
@@ -21,6 +27,22 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
+
+/* body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #74ebd5, #9face6);
+  color: #333;
+  text-align: center;
+} */
+/* 
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+} */
 </style>
